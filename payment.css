@@ -1,0 +1,86 @@
+/* Container resembling a receipt form, resizable */
+.receipt-container {
+    max-width: 600px;
+    width: 90%;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    resize: vertical;
+    overflow: auto;
+}
+
+h1, h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p.success-msg {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: green;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: 700;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+.total {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-top: 2px solid #333;
+    padding-top: 10px;
+    color: #111;
+}
+
+a.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a.back-link:hover {
+    text-decoration: underline;
+}
+
+        /* Smooth scrollbar for container on supported browsers */
+.receipt-container::-webkit-scrollbar {
+    width: 8px;
+}
+.receipt-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 4px;
+}

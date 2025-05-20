@@ -1,0 +1,80 @@
+body {
+    background-color: lightyellow;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+}
+.maincontainer {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    margin-left: 20rem;  
+}
+.container{
+    display: flex;
+    flex-direction: row;   
+}
+.header{
+    background-color: aquamarine;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+table, th, td {
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    padding: 10px; /* Add padding for better spacing */
+    text-align: center; /* Align text to the left */
+    border: 1px solid #ddd;
+}
+table{
+    width: 100%;
+    max-width: 2500px;
+    align-items: center;
+    justify-content: center;
+}
+/* Input styles only */
+.header input[type="text"],
+.header input[type="number"],
+.header input[type="file"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.header input[type="text"]:focus,
+.header input[type="number"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* File input specific styling */
+.header input[type="file"] {
+    padding: 6px;
+    cursor: pointer;
+}
+
+/* Submit button only */
+.header input[type="submit"] {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.header input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Placeholder styling */
+.header input::placeholder {
+    color: #999;
+    font-style: italic;
+}
