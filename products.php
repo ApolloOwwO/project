@@ -60,44 +60,28 @@
                                 $coffee_description = $row['coffee_description'];
                                 $Quantity = $row['Quantity'];
                                 $Price = $row['Price'];
-                    ?>
-                    <tr>
-                        <td><?php echo $ID; ?></td>
-                        <td><img src="./images/<?php echo htmlspecialchars($coffee_image); ?>" alt="<?php echo htmlspecialchars($coffee_name); ?>" width="100" height="75"></td>
-                        <td><?php echo htmlspecialchars($coffee_name); ?></td>
-                        <td><?php echo htmlspecialchars($coffee_description); ?></td>
-                        <td><?php echo $Quantity; ?></td>
-                        <td><?php echo $Price; ?></td>  
+            ?>
+                <tr>
+                    <td><?php echo $ID; ?></td>
                         <td>
-                            <a href="edit.php?ID=<?php echo $row['ID']; ?>">EDIT</a> | 
-                            <a href="delete.php?ID=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this item?');">DELETE</a>
+                        <img src="./images/<?php echo htmlspecialchars($coffee_image); ?>" alt="<?php echo htmlspecialchars($coffee_name); ?>" width="100" height="75">
                         </td>
-                    </tr>
-                    <?php
+                            <td><?php echo htmlspecialchars($coffee_name); ?></td>
+                            <td><?php echo htmlspecialchars($coffee_description); ?></td>
+                            <td><?php echo $Quantity; ?></td>
+                            <td><?php echo $Price; ?></td>  
+                            <td>
+                                <a href="edit.php?ID=<?php echo $row['ID']; ?>">EDIT</a> | 
+                                <a href="delete.php?ID=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this item?');">DELETE</a>
+                </tr>
+                        <?php
+                                }
                             }
-                        }
-                    ?>
-                </tbody>
-            </table>
+                        ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-
-    <script>
-        function confirmLogout() {
-            Swal.fire({
-                title: "Are you sure?",
-                text: "You will be logged out!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#d33",
-                cancelButtonColor: "#3085d6",
-                confirmButtonText: "Yes, log me out!"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.location.href = "login.php";
-                }
-            });
-        }
-    </script>
+        </div>
 </body>
 </html>
